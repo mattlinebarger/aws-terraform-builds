@@ -6,10 +6,6 @@ variable "mariadb_password" {
   type        = string
   default     = ""
 }
-variable "sftp_path" {
-  type        = string
-  default     = ""
-}
 variable "profile_name" {
   type        = string
   default     = ""

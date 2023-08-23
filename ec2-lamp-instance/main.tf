@@ -56,12 +56,9 @@ sudo curl -o /etc/ssh/sshd_config https://gist.githubusercontent.com/mattlinebar
 sudo systemctl restart sshd
 echo ec2-user:${var.ec2-user_password} | sudo chpasswd
 sudo dnf install -y vsftpd
-sudo curl -o /etc/vsftpd/vsftpd.conf https://gist.githubusercontent.com/mattlinebarger/3086c3f4c4a5de7ba96c81b834166736/raw/87531afe8ffcdecd8038a4973a4267611aeb35de/vsftpd.conf
-LOCAL_ROOT="local_root=${var.sftp_path}"
-PASV_ADDRESS="pasv_address="
+sudo curl -o /etc/vsftpd/vsftpd.conf https://gist.githubusercontent.com/mattlinebarger/3086c3f4c4a5de7ba96c81b834166736/raw/56fe095199cfcea834a57b794c07d95dcf9af6c1/vsftpd.conf
 THEIP=$(curl http://checkip.amazonaws.com 2>/dev/null)
-sudo echo $LOCAL_ROOT >> /etc/vsftpd/vsftpd.conf
-sudo echo $PASV_ADDRESS$THEIP >> /etc/vsftpd/vsftpd.conf
+sudo echo $THEIP >> /etc/vsftpd/vsftpd.conf
 sudo systemctl restart vsftpd
 sudo systemctl enable vsftpd
 EOF
