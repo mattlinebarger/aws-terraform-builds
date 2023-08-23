@@ -1,4 +1,4 @@
-# Custon AWS Terraform Builds
+# Custom AWS Terraform Builds
 
 A place to keep my custom AWS Terraform builds.
 
