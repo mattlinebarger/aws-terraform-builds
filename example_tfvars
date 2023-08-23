@@ -1,0 +1,16 @@
+# My Account Settings
+ec2-user_password = "make_a_password_you_can_use_to_sftp_into_the_instance"
+mariadb_password = "make_a_password_for_the_mariadb_root_user"
+profile_name = "my_aws_profile"
+instance_key = "my_ec2_key"
+vpc = "vpc-00000000"
+subnet = "subnet-00000000"
+security_groups = ["sg-00000000000000000"]
+# =================================================================================================
+
+# Instance Settings
+ami = "ami-08a52ddb321b32a8c" # Amazon Linux 2023 AMI
+region =  "us-east-1"
+instance_type = "t2.micro"
+instance_tags = { "Name" = "some-cool-name", "creator" = "John Doe" }
+# =================================================================================================
